@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="997.0" stylesheets="@styles/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
+   <children>
+      <Button fx:id="sceneChange1" layoutX="288.0" layoutY="324.0" mnemonicParsing="false" onAction="#switchToScene2" opacity="0.9" prefHeight="38.0" prefWidth="106.0" styleClass="menu-button" text="Hauptmenü">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Reflection fraction="0.67" />
+         </effect>
+      </Button>
+      <ImageView fitHeight="150.0" fitWidth="581.0" layoutX="288.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+    	<image>
+            <Image url="@../../../../Desktop/Java/Images/FH_Dortmund-logo.png" />
+    	</image>
+	  </ImageView>
+      <Button fx:id="sceneChange2" layoutX="455.0" layoutY="324.0" mnemonicParsing="false" onAction="#switchToSceneLeitfaden" prefHeight="38.0" prefWidth="83.0" styleClass="menu-button" text="Leitfaden">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Button fx:id="sceneChange3" layoutX="628.0" layoutY="324.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="38.0" prefWidth="77.0" styleClass="menu-button" text="Katalog">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <MenuBar layoutX="13.0" layoutY="25.0" prefHeight="41.0" prefWidth="366.0" style="-fx-background-color: white;">
+        <menus>
+          <Menu mnemonicParsing="false" text="Hilfe">
+            <items>
+              <MenuItem mnemonicParsing="false" text="F.A.Q" />
+                  <MenuItem mnemonicParsing="false" text="Trouble shooting" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Kontakte">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Ersteller" />
+                  <MenuItem mnemonicParsing="false" text="Unterstützer" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Version" />
+            <Menu mnemonicParsing="false" text="Impressum" />
+        </menus>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <DropShadow height="28.82" radius="20.627499999999998" spread="0.06" width="55.69" />
+         </effect>
+      </MenuBar>
+      <Label layoutX="352.0" layoutY="425.0" text="we focus on students" textFill="#685e5e">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Line endX="-46.0" layoutX="757.0" layoutY="446.0" startX="-100.0" />
+      <Line endX="-46.0" layoutX="386.0" layoutY="445.0" startX="-100.0" />
+      <Line endX="135.0" endY="-60.6568603515625" layoutX="862.0" layoutY="565.0" startX="38.0" startY="52.0" stroke="#e06e24" strokeWidth="8.0">
+         <effect>
+            <DropShadow />
+         </effect></Line>
+      <Line endX="135.0" endY="-60.6568603515625" layoutX="880.0" layoutY="587.0" startX="38.0" startY="52.0" stroke="#e06e24" strokeWidth="8.0">
+         <effect>
+            <DropShadow />
+         </effect></Line>
+   </children>
+</AnchorPane>

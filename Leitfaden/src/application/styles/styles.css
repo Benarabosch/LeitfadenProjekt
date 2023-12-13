@@ -1,0 +1,35 @@
+/* styles.css */
+.menu-button:hover {
+    -fx-background-color: orange; /* Hintergrundfarbe bei Hover */
+    -fx-text-fill: white; /* Textfarbe bei Hover */
+    -fx-cursor: hand; /* Cursor-Form bei Hover */
+}
+
+.menu-button:pressed {
+    -fx-background-color: gray; /* Hintergrundfarbe beim Drücken */
+}
+
+.menu-button {
+    -fx-font-size: 18px;
+    -fx-background-color: white; /* Hintergrundfarbe */
+    -fx-text-fill: black; /* Textfarbe */
+    -fx-border-color: orange; /* Randfarbe */
+    -fx-cursor: hand; /* Cursor-Form */
+}
+
+/* Stile für Menüleiste */
+.menu-bar {
+    -fx-background-color: orange; /* Hintergrundfarbe der Menüleiste */
+    -fx-padding: 0; /* Rand auf 0 setzen */
+}
+
+/* Stile für Menü */
+.menu {
+    -fx-background-color: white; /* Hintergrundfarbe des Menüs */
+   
+}
+
+/* Stile für Menüpunkt */
+.menu-item {
+    -fx-text-fill: white; /* Textfarbe des Menüpunkts */
+}
