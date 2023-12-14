@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 //TEST TEST TEST
 public class Main extends Application {
@@ -17,12 +18,14 @@ public class Main extends Application {
 			stage.setTitle("Wirtschaftsinformatik Leitfaden");
 			Image icon = new Image(getClass().getResourceAsStream("/images/Icon.png"));
 			stage.getIcons().add(icon);
+			
 			//Szene1 ist das Main Interface
 			Parent root = FXMLLoader.load(getClass().getResource("Scene1.fxml"));
 			Scene scene = new Scene(root);
+			 // Entferne die Standard-Windows-Dekoration
+	         //stage.initStyle(StageStyle.UNDECORATED);
 			stage.setResizable(false);
 			stage.setScene(scene);
-		
             stage.show(); 
             
             // Zentriere das Fenster auf dem Bildschirm

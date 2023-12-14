@@ -59,7 +59,10 @@
                   <MenuItem mnemonicParsing="false" text="Unterstützer" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Version" />
+          <Menu mnemonicParsing="false" text="Version">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#switchToSceneLeitfaden" text="V 0.1" />
+               </items></Menu>
             <Menu mnemonicParsing="false" text="Impressum" />
         </menus>
          <opaqueInsets>

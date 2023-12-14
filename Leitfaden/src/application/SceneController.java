@@ -29,8 +29,6 @@ public class SceneController {
 			 stage.setScene(scene);
 			 centerStage(stage);
 			 stage.show();
-			 System.out.println("TEST TEST TEST");
-			 
 		} catch (IOException e) {
 			
 			e.printStackTrace();
@@ -59,6 +57,20 @@ public class SceneController {
 			 stage.setScene(scene);
 			 stage.show();
 			 centerStage(stage);
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+	}
+	
+	public void switchToSceneVersionierung(ActionEvent event) {
+		try {
+			root = FXMLLoader.load(getClass().getResource("Versionierung.fxml"));
+			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+			scene = new Scene(root);
+			stage.setScene(scene);
+			centerStage(stage);
+			stage.show();
 		} catch (IOException e) {
 			
 			e.printStackTrace();
