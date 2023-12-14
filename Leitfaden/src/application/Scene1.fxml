@@ -26,7 +26,7 @@
       </Button>
       <ImageView fitHeight="150.0" fitWidth="581.0" layoutX="288.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
     	<image>
-            <Image url="@../../../../Desktop/Java/Images/FH_Dortmund-logo.png" />
+            <Image url="@../images/FH_Dortmund-logo.png" />
     	</image>
 	  </ImageView>
       <Button fx:id="sceneChange2" layoutX="455.0" layoutY="324.0" mnemonicParsing="false" onAction="#switchToSceneLeitfaden" prefHeight="38.0" prefWidth="83.0" styleClass="menu-button" text="Leitfaden">

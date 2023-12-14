@@ -29,6 +29,7 @@ public class SceneController {
 			 stage.setScene(scene);
 			 centerStage(stage);
 			 stage.show();
+			 System.out.println("TEST TEST TEST");
 			 
 		} catch (IOException e) {
 			
