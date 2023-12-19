@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
@@ -21,11 +22,14 @@ public class SceneController {
 	private Scene scene;
 	private Parent root;
 	
+	
+	
+    
 	public void switchToScene1(ActionEvent event) {
 		try {
 			 root = FXMLLoader.load(getClass().getResource("Scene1.fxml"));
 			 stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-			 scene = new Scene(root);
+			 scene = new Scene(root); 
 			 stage.setScene(scene);
 			 centerStage(stage);
 			 stage.show();
@@ -64,17 +68,27 @@ public class SceneController {
 	}
 	
 	public void switchToSceneVersionierung(ActionEvent event) {
-		try {
-			root = FXMLLoader.load(getClass().getResource("Versionierung.fxml"));
-			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-			scene = new Scene(root);
-			stage.setScene(scene);
-			centerStage(stage);
-			stage.show();
-		} catch (IOException e) {
-			
-			e.printStackTrace();
-		}
+        try {
+            root = FXMLLoader.load(getClass().getResource("Versionierung.fxml"));
+            scene = new Scene(root);
+            stage.setScene(scene);
+            centerStage(stage);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+	
+	public void switchToHelpScene(ActionEvent event) {
+	    try {
+	    	root = FXMLLoader.load(getClass().getResource("TroubleShooting.fxml"));
+            scene = new Scene(root);
+            stage.setScene(scene);
+            centerStage(stage);
+            stage.show();
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
 	}
 	
 	private void centerStage(Stage stage) {
@@ -92,4 +106,8 @@ public class SceneController {
         stage.setX(x);
         stage.setY(y);
     }
+
+	public void setStage(Stage stage) {
+		this.stage = stage;
+	}
 }

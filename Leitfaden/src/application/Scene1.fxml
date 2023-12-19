@@ -45,27 +45,13 @@
             <Reflection />
          </effect>
       </Button>
-      <MenuBar layoutX="13.0" layoutY="25.0" prefHeight="43.0" prefWidth="417.0" style="-fx-background-color: white;">
+      <MenuBar layoutX="13.0" layoutY="25.0" prefHeight="43.0" prefWidth="366.0" style="-fx-background-color: white;">
         <menus>
-          <Menu mnemonicParsing="false">
+          <Menu mnemonicParsing="false" text="Hilfe">
             <items>
-              <MenuItem mnemonicParsing="false" text="F.A.Q">
-                     <graphic>
-                        <Button mnemonicParsing="false" text="Button">
-                           <effect>
-                              <Reflection />
-                           </effect>
-                        </Button>
-                     </graphic></MenuItem>
-                  <MenuItem mnemonicParsing="false" text="Trouble shooting" />
+              <MenuItem mnemonicParsing="false" text="F.A.Q" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToHelpScene" text="Trouble shooting" />
             </items>
-               <graphic>
-                  <Button fx:id="sceneChange21" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="38.0" prefWidth="83.0" styleClass="menu-button" text="Hilfe">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Button>
-               </graphic>
           </Menu>
           <Menu mnemonicParsing="false" text="Kontakte">
             <items>
@@ -73,9 +59,9 @@
                   <MenuItem mnemonicParsing="false" text="Unterstützer" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Version">
+          <Menu mnemonicParsing="false" onAction="#switchToSceneVersionierung" text="Version">
                <items>
-                  <MenuItem mnemonicParsing="false" onAction="#switchToSceneLeitfaden" text="V 0.1" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToSceneVersionierung" text="V 0.1" />
                </items></Menu>
             <Menu mnemonicParsing="false" text="Impressum" />
         </menus>

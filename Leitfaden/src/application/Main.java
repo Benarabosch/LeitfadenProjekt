@@ -11,29 +11,38 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 	@Override
-	public void start(Stage stage) {
-		try {
-			//Icon und Titel
-			stage.setTitle("Wirtschaftsinformatik Leitfaden");
-			Image icon = new Image(getClass().getResourceAsStream("/images/Icon.png"));
-			stage.getIcons().add(icon);
-			
-			//Szene1 ist das Main Interface
-			Parent root = FXMLLoader.load(getClass().getResource("Scene1.fxml"));
-			Scene scene = new Scene(root);
-			 // Entferne die Standard-Windows-Dekoration
-	         //stage.initStyle(StageStyle.UNDECORATED);
-			stage.setResizable(false);
-			stage.setScene(scene);
+	 public void start(Stage stage) {
+        try {
+        	
+            //Icon and Title
+            stage.setTitle("Wirtschaftsinformatik Leitfaden");
+            Image icon = new Image(getClass().getResourceAsStream("/images/Icon.png"));
+            stage.getIcons().add(icon);
+            
+            //Scene1 is the Main Interface
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Scene1.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            
+            // Get the controller and set the stage
+            SceneController controller = loader.getController();
+            controller.setStage(stage);
+            
+            // Remove the default Windows decoration
+            //stage.initStyle(StageStyle.UNDECORATED);
+            stage.setResizable(false);
+            stage.setScene(scene);
             stage.show(); 
             
-            // Zentriere das Fenster auf dem Bildschirm
+            // Center the window on the screen
             centerStage(stage);
+
             
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
+            
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
 	
 	private void centerStage(Stage stage) {
         // Rufe die Bildschirmgröße ab
