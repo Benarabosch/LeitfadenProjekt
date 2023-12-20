@@ -16,7 +16,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="997.0" stylesheets="@styles/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
    <children>
-      <Button fx:id="sceneChange1" layoutX="288.0" layoutY="324.0" mnemonicParsing="false" onAction="#switchToScene2" opacity="0.9" prefHeight="38.0" prefWidth="106.0" styleClass="menu-button" text="Hauptmenü">
+      <Button layoutX="288.0" layoutY="324.0" mnemonicParsing="false" onAction="#switchToScene2" opacity="0.9" prefHeight="38.0" prefWidth="106.0" styleClass="menu-button" text="Hauptmenü">
          <font>
             <Font size="18.0" />
          </font>
@@ -29,7 +29,7 @@
             <Image url="@../images/FH_Dortmund-logo.png" />
     	</image>
 	  </ImageView>
-      <Button fx:id="sceneChange2" layoutX="455.0" layoutY="324.0" mnemonicParsing="false" onAction="#switchToSceneLeitfaden" prefHeight="38.0" prefWidth="83.0" styleClass="menu-button" text="Leitfaden">
+      <Button layoutX="455.0" layoutY="324.0" mnemonicParsing="false" onAction="#switchToSceneLeitfaden" prefHeight="38.0" prefWidth="83.0" styleClass="menu-button" text="Leitfaden">
          <font>
             <Font size="18.0" />
          </font>
@@ -37,7 +37,7 @@
             <Reflection />
          </effect>
       </Button>
-      <Button fx:id="sceneChange3" layoutX="628.0" layoutY="324.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="38.0" prefWidth="77.0" styleClass="menu-button" text="Katalog">
+      <Button layoutX="628.0" layoutY="324.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="38.0" prefWidth="77.0" styleClass="menu-button" text="Katalog">
          <font>
             <Font size="18.0" />
          </font>

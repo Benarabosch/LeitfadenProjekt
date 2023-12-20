@@ -15,9 +15,6 @@ import javafx.stage.Stage;
 
 public class SceneController {
 
-	@FXML
-	Button sceneChange1;
-	
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
@@ -82,6 +79,7 @@ public class SceneController {
 	public void switchToHelpScene(ActionEvent event) {
 	    try {
 	    	root = FXMLLoader.load(getClass().getResource("TroubleShooting.fxml"));
+	    	stage = (Stage) root.getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
             centerStage(stage);
