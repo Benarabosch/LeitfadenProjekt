@@ -24,12 +24,16 @@ public class SceneController {
     
 	public void switchToScene1(ActionEvent event) {
 		try {
-			 root = FXMLLoader.load(getClass().getResource("Scene1.fxml"));
+			 FXMLLoader loader = new FXMLLoader(getClass().getResource("Scene1.fxml"));
+			 root =  loader.load();
 			 stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			 scene = new Scene(root); 
 			 stage.setScene(scene);
+			 SceneController controller = loader.getController();
+	         controller.setStage(stage);
 			 centerStage(stage);
 			 stage.show();
+			 
 		} catch (IOException e) {
 			
 			e.printStackTrace();
@@ -78,12 +82,12 @@ public class SceneController {
 	
 	public void switchToHelpScene(ActionEvent event) {
 	    try {
-	    	root = FXMLLoader.load(getClass().getResource("TroubleShooting.fxml"));
-	    	stage = (Stage) root.getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            centerStage(stage);
-            stage.show();
+	    	 root = FXMLLoader.load(getClass().getResource("TroubleShooting.fxml"));
+	         // Assuming 'stage' is already initialized
+	         scene = new Scene(root);
+	         stage.setScene(scene);
+	         centerStage(stage);
+	         stage.show();
 	    } catch (IOException e) {
 	        e.printStackTrace();
 	    }
