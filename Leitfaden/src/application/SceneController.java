@@ -19,9 +19,6 @@ public class SceneController {
 	private Scene scene;
 	private Parent root;
 	
-	
-	
-    
 	public void switchToScene1(ActionEvent event) {
 		try {
 			 FXMLLoader loader = new FXMLLoader(getClass().getResource("Scene1.fxml"));
@@ -29,6 +26,7 @@ public class SceneController {
 			 stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			 scene = new Scene(root); 
 			 stage.setScene(scene);
+			 //Muss hier initialisiert werden, sont Null Pointer
 			 SceneController controller = loader.getController();
 	         controller.setStage(stage);
 			 centerStage(stage);
