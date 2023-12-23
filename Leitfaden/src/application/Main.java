@@ -20,7 +20,7 @@ public class Main extends Application {
             stage.getIcons().add(icon);
             
             //Scene1 is the Main Interface
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Scene1.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Mainmenu.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             

@@ -21,7 +21,7 @@ public class SceneController {
 	
 	public void switchToScene1(ActionEvent event) {
 		try {
-			 FXMLLoader loader = new FXMLLoader(getClass().getResource("Scene1.fxml"));
+			 FXMLLoader loader = new FXMLLoader(getClass().getResource("Mainmenu.fxml"));
 			 root =  loader.load();
 			 stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			 scene = new Scene(root); 
