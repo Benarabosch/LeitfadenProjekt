@@ -14,7 +14,7 @@ public class Main extends Application {
 	 public void start(Stage stage) {
         try {
         	
-            //Icon and Title
+            //Icon und Titel
             stage.setTitle("Wirtschaftsinformatik Leitfaden");
             Image icon = new Image(getClass().getResourceAsStream("/images/Icon.png"));
             stage.getIcons().add(icon);
@@ -24,17 +24,17 @@ public class Main extends Application {
             Parent root = loader.load();
             Scene scene = new Scene(root);
             
-            // Get the controller and set the stage
+            // Controller wird benötigt um Stage zu setzen
             SceneController controller = loader.getController();
             controller.setStage(stage);
             
-            // Remove the default Windows decoration
+            // TEST FÜR STANDARD WINDOW OPTIONEN
             //stage.initStyle(StageStyle.UNDECORATED);
             stage.setResizable(false);
             stage.setScene(scene);
             stage.show(); 
             
-            // Center the window on the screen
+           
             centerStage(stage);
 
             
