@@ -40,6 +40,7 @@ public class SceneController {
 	
 	public void switchToScene2(ActionEvent event) {
 		try {
+			//Gerade Eine Test Szene
 			root = FXMLLoader.load(getClass().getResource("Scene2.fxml"));
 			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			scene = new Scene(root);
